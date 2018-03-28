@@ -66,8 +66,11 @@ function wheelListener(e){
 }
 
 
-// ON, OFF
+// 本モジュール返り値
 const ctrler = {
+	get status(){
+		return status;
+	}
 	enable(){
 		status || window.addEventListener('wheel', wheelListener, options);
 		status = true;
@@ -75,6 +78,11 @@ const ctrler = {
 	disable(){
 		status && window.removeEventListener('wheel', wheelListener, options);
 		status = false;
+	},
+	toggle(){
+		status ?
+			this.disable():
+			this.enable();
 	}
 }
 

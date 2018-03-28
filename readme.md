@@ -5,6 +5,7 @@
 
 ## なにこれ
 方向付きWheelEventの実装。
+* [DEMO - JSFiddle](https://jsfiddle.net/p85rvbka/10/)
 
 
 ## 使い方
@@ -36,6 +37,7 @@ import ctrler from 'wheel-direction';
 
 ctrler.enable();
 ctrler.disable();
+ctrler.toggle();
 ```
 
 ### addEventListener options
