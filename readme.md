@@ -35,6 +35,8 @@ element.addEventListener('wheel-up', (e)=>{
 ```js
 import ctrler from 'wheel-direction';
 
+ctrler.status; // boolean
+
 ctrler.enable();
 ctrler.disable();
 ctrler.toggle();
@@ -47,6 +49,6 @@ const mod = import('wheel-direction?once=true&passive=false');
 ```
 or
 ```html
-<!-- {once: true} -->
+<!-- 未検証 {once: true} -->
 <script type="module" src="./wheel-direction.mjs?once=true"></script>
 ```
