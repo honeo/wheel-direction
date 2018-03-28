@@ -5,7 +5,7 @@
 
 ## なにこれ
 方向付きWheelEventの実装。
-* [DEMO - JSFiddle](https://jsfiddle.net/p85rvbka/10/)
+* [DEMO - JSFiddle](https://jsfiddle.net/p6ckknm9/)
 
 
 ## 使い方
