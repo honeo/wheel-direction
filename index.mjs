@@ -68,17 +68,21 @@ function wheelListener(e){
 
 // 本モジュール返り値
 const ctrler = {
+
 	get status(){
 		return status;
-	}
+	},
+
 	enable(){
 		status || window.addEventListener('wheel', wheelListener, options);
 		status = true;
 	},
+
 	disable(){
 		status && window.removeEventListener('wheel', wheelListener, options);
 		status = false;
 	},
+
 	toggle(){
 		status ?
 			this.disable():
