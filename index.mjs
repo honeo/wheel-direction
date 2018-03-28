@@ -6,22 +6,25 @@
 			なし
 */
 
-// query
-const query = new URL(import.meta.url).searchParams;
-const options_query = {
-	capture: query.get('capture')==='true',
-	once: query.get('once')==='true',
-	passive: query.get('passive')==='true'
-}
 
 // default
 let status = true;
-const options_default = {
+const options = {
 	capture: true,
 	once: false,
 	passive: true
 }
-const options = Object.assign(options_default, options_query);
+
+// query
+try{
+	const query = new URL(import.meta.url).searchParams;
+	const options_query = {
+		capture: query.get('capture')==='true',
+		once: query.get('once')==='true',
+		passive: query.get('passive')==='true'
+	}
+	Object.assign(options, options_query);
+}catch(e){}
 
 window.addEventListener('wheel', wheelListener, options);
 
@@ -33,7 +36,6 @@ function wheelListener(e){
 	let direction;
 	const X = e.deltaX;
 	const Y = e.deltaY;
-
 
 	// X,Yどちらも0なら奥行き
 	if( X===0 && Y===0 ){
