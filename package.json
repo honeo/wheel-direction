@@ -1,6 +1,6 @@
 {
   "name": "wheel-direction",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "* [username/projectname](https://github.com/username/projectname)  \r * [projectname](https://www.npmjs.com/package/projectname)",
   "main": "index.js",
   "scripts": {
